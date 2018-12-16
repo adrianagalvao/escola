@@ -1,0 +1,11 @@
+<h2>Escola</h2>
+
+<ul class="esco">
+  <li *ngFor="let escola of esco"
+    [class.selected]="escola === selectedEscola"
+    (click)="onSelect(escola)">
+    <span class="badge">{{escola.id}}</span> {{escola.name}}
+  </li>
+</ul>
+
+<app-escola-detail [escola]="selectedEscola"></app-escola-detail>

@@ -1,0 +1,12 @@
+<div *ngIf="escola">
+
+  <h2>{{escola.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{escola.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="escola.name" placeholder="name"/>
+    </label>
+  </div>
+
+</div>
+<app-escola-detail [escola]="selectedEscola"></app-escola-detail>
